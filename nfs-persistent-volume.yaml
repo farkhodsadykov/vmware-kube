@@ -6,7 +6,6 @@ metadata:
     nfs: volume
 spec:
   persistentVolumeReclaimPolicy: Recycle
-  storageClassName: storage
   capacity:
     storage: 20G
   accessModes:
