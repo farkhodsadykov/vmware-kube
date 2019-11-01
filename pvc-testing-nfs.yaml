@@ -1,12 +1,14 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: block-pvc
+  name: nfs-pvc
 spec:
-  storageClassName: manual
+  selector:
+    matchLabels:
+      nfs: storage
   accessModes:
     - ReadWriteMany
-  volumeMode: Block
+  storageClassName: ""
   resources:
     requests:
       storage: 1Gi

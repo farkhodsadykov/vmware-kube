@@ -16,6 +16,7 @@ spec:
   nodeSelector:
     kubernetes.io/hostname: node-2
   volumes:
+    
     - name: test-volume
       persistentVolumeClaim:
         claimName: nfs-pvc

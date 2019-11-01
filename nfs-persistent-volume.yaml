@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: nfs-storage
+  name: nfs-pv
   labels:
-    nfs: volume
+    nfs: storage
 spec:
-  persistentVolumeReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Retain
   capacity:
     storage: 20G
   accessModes:
